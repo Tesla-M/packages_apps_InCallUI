@@ -820,6 +820,13 @@ public class InCallPresenter implements CallList.Listener,
         }
     }
 
+    /*package*/
+    void updateNotification() {
+        if (mStatusBarNotifier != null) {
+            mStatusBarNotifier.updateNotification(mInCallState, mCallList);
+        }
+    }
+
     public void addInCallUiListener(InCallUiListener listener) {
         mInCallUiListeners.add(listener);
     }
